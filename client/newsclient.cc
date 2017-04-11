@@ -1,5 +1,8 @@
-// client skeleton
-// infinite feeding loop
+/*-----------------------
+User client skeleton. WIP
+used for user interaction
+
+-----------------------*/
 
 #include <iostream>
 #include <string>
