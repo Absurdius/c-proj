@@ -3,32 +3,27 @@ The article class
 -----------------------*/
 #include<string>
 #include<sstream>
-#include<cstdlib> //rand();
 
-class Article
+operator==(Article a, Article b)
 {
-public:
-  Article(string title, string author, string text);
-  string toString();
-private:
-  string author;
-  string title;
-  string text;
-  unsigned int id;
-};
-
-Article::Article(string t, string a, string txt)
-{
-	title = t; 
-	author = a; 
-	txt = txt;
-	// create random number
-	id = rand() % 10000; 
+	return a.id == b.id; 
 }
+
+operator>(Atricle a, Article b)
+{
+	return a.title > b.title; 
+}
+
+Article::Article(string t, string a, string txt, int i) : title(t) : author(a) : text(txt) : id(i) {}
 
 string Article::toString()
 {
 	stringstream ss; 
 	ss << title << "\n" << "by " << author << "\n" << "Article ID: " << id << "\n"; 
 	return ss.tostring();
+}
+
+string getTitle()
+{
+	return title;
 }

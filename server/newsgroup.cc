@@ -2,22 +2,11 @@
 newsgroup
 -------------------*/
 
-class NewsGroup
-{
-public:
-  NewsGroup(string n);
-  ~NewsGroup();
-  addArticle(Article a);
-  bool removeArticle(); //ASSUMES ARTICLE HAS == OPERATOR IMPLEMENT
-  sortArticles(); // ASSUMES ARTICLE HAS < OPERATOR IMPLEMENT
-  getHeadlines(); 
-private:
-  List<Article> articles; // can be vect too 
-  string name;
-  unsigned int id;
-};
+#include<List>
+#include<algorithm>
+#inclide "newsgroup.h"
 
-NewsGroup::NewsGroup(string n) name(n)
+NewsGroup::NewsGroup(string n) : name(n)
 {}
 
 NewsGroup::~NewsGroup()
@@ -47,6 +36,6 @@ NewsGroup::getHeadlines()
 {
 	for(article a: articles)
 	{
-		a.getTitle(); // IMPLEMENT GET TITLE
+		a.getTitle(); 
 	}
 }
